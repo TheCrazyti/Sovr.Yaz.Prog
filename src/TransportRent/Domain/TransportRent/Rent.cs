@@ -12,7 +12,7 @@ namespace Domain.TransportRent
 {
     internal class Rent
     {
-        public RenterName renterName { get; private set; }
+        public RenterName RenterName { get; private set; }
         public RenterPhoneNumber PhoneNumber { get; private set; }
         public RentData RentData { get; private set; }
         public CompanyName CompanyName { get; private set; }
@@ -23,7 +23,7 @@ namespace Domain.TransportRent
 
         public Rent(RenterName Name, RenterPhoneNumber phoneNumber, RentData rentData, CompanyName companyName, CompanyLocation location, ID_Transport Id, Last_Transport_Location lastLocation, ID_Payment Id_Payment)
         {
-            renterName = Name;
+            RenterName = Name;
             PhoneNumber = phoneNumber;
             RentData = rentData;
             CompanyName = companyName;
