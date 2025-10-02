@@ -10,7 +10,7 @@ namespace Domain.Transports
     {
         public string LastLocation { get; }
 
-        public Last_Transport_Location(string Adress) => LastLocation = Adress;
+        private Last_Transport_Location(string Adress) => LastLocation = Adress;
 
         public static Transport_Location Create(string Adress)
         {
