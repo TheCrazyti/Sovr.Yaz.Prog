@@ -10,7 +10,10 @@ namespace Domain.TransportRent
     {
         public DateTime rentData { get; }
 
-        public RentData(DateTime dateTime) => rentData = dateTime;
+        public RentData(DateTime dateTime)
+        {
+            rentData = dateTime;
+        }
 
         public static RentData Create(DateTime dateTime)
         {
