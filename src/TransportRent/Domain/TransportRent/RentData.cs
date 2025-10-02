@@ -10,7 +10,7 @@ namespace Domain.TransportRent
     {
         public DateTime rentData { get; }
 
-        public RentData(DateTime dateTime)
+        private RentData(DateTime dateTime)
         {
             rentData = dateTime;
         }

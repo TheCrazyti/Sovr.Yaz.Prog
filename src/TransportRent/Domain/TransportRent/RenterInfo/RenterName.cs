@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Payments;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,22 @@ namespace Domain.TransportRent.RenterInfo
     {
         public string Name {get;}
 
-        public RenterName(string name) => Name = name;
+        private RenterName(string name) => Name = name;
+
+        public static RenterName Create(string value)
+        {
+            if ((string.IsNullOrWhiteSpace==null))
+            {
+                throw new ArgumentException("Пустая строка");
+            }
+
+            if ((value.Length>=60))
+            {
+                throw new ArgumentException("Слишком длинное имя");
+            }
+
+            return new RenterName(value);
+        }
 
     }
 }
